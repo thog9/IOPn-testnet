@@ -62,6 +62,10 @@ async def run_nftcollection(language: str):
 async def run_sendtx(language: str):
     from scripts.sendtx import run_sendtx as sendtx_run
     await sendtx_run(language)
+
+async def run_mintbadge(language: str):
+    from scripts.mintbadge import run_mintbadge as mintbadge_run
+    await mintbadge_run(language)
     
 async def cmd_exit(language: str):
     messages = {"vi": "Đang thoát...", "en": "Exiting..."}
@@ -74,6 +78,7 @@ SCRIPT_MAP = {
     "deploytoken": run_deploytoken,
     "sendtoken": run_sendtoken,
     "nftcollection": run_nftcollection,
+    "mintbadge": run_mintbadge,
     "exit": cmd_exit
 }
 
@@ -89,6 +94,9 @@ def get_available_scripts(language):
             {"name": "4. Deploy NFT smart-contract", "value": "nftcollection"},
             {"name": "5. Gửi TX ngẫu nhiên hoặc File (address.txt)", "value": "sendtx"},
 
+            {"name": "6. Mint Genesisn-Badge → Genesis IOPn", "value": "mintbadge", "locked": True},
+
+            
             {"name": "X. Thoát", "value": "exit"},
         ],
         'en': [
@@ -98,6 +106,8 @@ def get_available_scripts(language):
             {"name": "3. Send Token ERC20 random or File (addressERC20.txt)", "value": "sendtoken"},
             {"name": "4. Deploy NFT smart-contract", "value": "nftcollection"},
             {"name": "5. Send TX random or File (address.txt)", "value": "sendtx"},
+
+            {"name": "6. Mint Genesisn-Badge → Genesis IOPn", "value": "mintbadge", "locked": True},
 
             {"name": "X. Thoát", "value": "exit"},
         ]
@@ -210,5 +220,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
