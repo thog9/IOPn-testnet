@@ -94,7 +94,7 @@ def get_available_scripts(language):
             {"name": "4. Deploy NFT smart-contract", "value": "nftcollection"},
             {"name": "5. Gửi TX ngẫu nhiên hoặc File (address.txt)", "value": "sendtx"},
 
-            {"name": "6. Mint Genesisn-Badge → Genesis IOPn", "value": "mintbadge", "locked": True},
+            {"name": "6. Mint Genesis n-Badge → Genesis IOPn", "value": "mintbadge", "locked": True},
 
             
             {"name": "X. Thoát", "value": "exit"},
@@ -107,7 +107,7 @@ def get_available_scripts(language):
             {"name": "4. Deploy NFT smart-contract", "value": "nftcollection"},
             {"name": "5. Send TX random or File (address.txt)", "value": "sendtx"},
 
-            {"name": "6. Mint Genesisn-Badge → Genesis IOPn", "value": "mintbadge", "locked": True},
+            {"name": "6. Mint Genesis n-Badge → Genesis IOPn", "value": "mintbadge", "locked": True},
 
             {"name": "X. Thoát", "value": "exit"},
         ]
@@ -220,6 +220,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
